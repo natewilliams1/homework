@@ -4,13 +4,7 @@ describe 'Member Login' do
       @email = 'nmwilliams87@gmail.com'
       @password = 'Test123'
 
-      visit HomePage do |page|
-        page.cancel_modal
-        sleep 2
-        page.login_button_element.wait_until(&:present?).click
-      end
-
-      on SigninPage do |page|
+      visit  SigninPage do |page|
         page.email = @email
         page.password = @password
         page.login
