@@ -58,5 +58,5 @@ npm install cypress --save-dev
 
 ## To Open and Run Cypress use this command:
 ```bash
-npm i && npm run cypress:open
+$(npm bin)/cypress open
 ```
