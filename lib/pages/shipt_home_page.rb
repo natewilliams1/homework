@@ -1,4 +1,4 @@
-class HomePage
+class ShiptHomePage
   include PageObject
 
   page_url 'https://www.shipt.com'
