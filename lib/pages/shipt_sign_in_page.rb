@@ -1,4 +1,4 @@
-class SigninPage
+class ShiptSigninPage
   include PageObject
 
   page_url 'https://shop.shipt.com/login'
