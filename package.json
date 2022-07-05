@@ -11,10 +11,10 @@
 	"author": "Nate Williams",
 	"license": "ISC",
 	"devDependencies": {
-		"cypress": "^3.2.0",
+		"cypress": "^3.8.3",
 		"eslint": "^5.16.0",
 		"eslint-plugin-chai-friendly": "^0.4.1",
-		"eslint-plugin-cypress": "^2.2.1"
+		"eslint-plugin-cypress": "^2.12.1"
 	},
 	"dependencies": {
 		"faker": "^4.1.0"
