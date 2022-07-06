@@ -30,21 +30,12 @@ describe('Signup', () => {
         cy.get('@passwordField').focus().type('Test1234')
         cy.get('@signupButton').click()
         cy.log('checking for onboarding message')
-        cy.get('div > #onboarding-content > .row > .col-12 > .download-cta-title').should('contain', 'Record your first video') 
-    })
-
-    it('Prevents Login with invalid email credentials', () => {
-        cy.server()
-        cy.route({
-            method: 'POST',
-            url: '**/auth/**',
-            status: 401
-        }).as('loginFail')
-        cy.get('@emailField').focus().type('Badcredentials@email.comz')
-        cy.get('@passwordField').focus().type('test1234')
-        cy.get('@signupButton').click()
+        cy.get('div > #onboarding-content > .row > .col-12 > .download-cta-title').should('be.visible') 
+        cy.visit('https://share.getcloudapp.com/dashboard')
+        cy.get('[id=main-menu]').click()
         cy.wait(1000)
-        cy.url().should('not.contain', 'https://share.getcloudapp.com/onboarding')
-        cy.get('body > .container > .alert-danger').should('be.visible').and('contain', 'Validation failed')
+        cy.get('[data-testid=dropdown-link-sign_out]').click()
+        cy.log('checking for correct url')
+        cy.url().should('not.contain', 'https://share.getcloudapp.com/dashboard')
     })
 })

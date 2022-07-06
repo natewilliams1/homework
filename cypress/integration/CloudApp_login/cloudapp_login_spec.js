@@ -18,7 +18,7 @@ describe('Login', () => {
         cy.get('@passwordField').focus().type('Test1234')
         cy.get('@loginButton').click()
         cy.log('checking for account icon')
-        cy.get('body > #sidebar-layout-wrapper > #content > .alert-message').should('contain', 'Welcome back!')  
+        cy.get('body > #sidebar-layout-wrapper > #content > .alert-message').should('be.visible')  
         cy.get('[id=main-menu]').click()
         cy.wait(1000)
         cy.get('[data-testid=dropdown-link-sign_out]').click()
