@@ -13,12 +13,17 @@ describe('Login', () => {
         cy.get('[id=password]').as('passwordField').should('be.visible')
     })
 
-    it('Logs in with valid credentials', () => {
+    it('Logs in with valid credentials and logs out', () => {
         cy.get('@emailField').focus().type('nmwilliams87+ca@gmail.com')
         cy.get('@passwordField').focus().type('Test1234')
         cy.get('@loginButton').click()
         cy.log('checking for account icon')
-        .get('body > #sidebar-layout-wrapper > #content > .alert-message').should('contain', 'Welcome back!')  
+        cy.get('body > #sidebar-layout-wrapper > #content > .alert-message').should('contain', 'Welcome back!')  
+        cy.get('[id=main-menu]').click()
+        cy.wait(1000)
+        cy.get('[data-testid=dropdown-link-sign_out]').click()
+        cy.log('checking for correct url')
+        cy.url().should('not.contain', 'https://share.getcloudapp.com/dashboard')
     })
 
     it('Prevents Login with invalid credentials', () => {
