@@ -26,11 +26,6 @@ describe('Login', () => {
     })
 
     it('Prevents Login with invalid credentials', () => {
-        cy.intercept({
-            method: 'POST',
-            url: '**/auth/**',
-            status: 401
-        }).as('loginFail')
         cy.get('@emailField').focus().type('auth@test.comzzz')
         cy.get('@passwordField').focus().type('Beepbopboob123')
         cy.get('@loginButton').click()
