@@ -1,6 +1,7 @@
 # homework
 
 ## Cypress/javascript Automation:
+
 - homework > Cypress folder > e2e folder > CloudApp_avatar > cloudapp_avatar_spec.cy.js
 
 -- logs into application, updates avatar, logs out of application; checks that upating avatar to something other than an image is prevented
