@@ -7,7 +7,6 @@ describe('Signup', () => {
         cy.visit('signup')
         cy.on('uncaught:exception', (err, runnable) => {
             expect(err.message).to.include('is not defined')
-              done()
               return false
             });
         cy.log('checking for signup button')
@@ -19,6 +18,8 @@ describe('Signup', () => {
     })
 
     it('Signup successful with valid credentials', () => {
+        const faker = require("faker")
+        let email = faker.internet.email()
         cy.get('@emailField').focus().type(faker.internet.email())
         cy.get('@passwordField').focus().type('Test1234')
         cy.get('@signupButton').click()

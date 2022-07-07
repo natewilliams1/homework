@@ -26,8 +26,7 @@ describe('Login', () => {
     })
 
     it('Prevents Login with invalid credentials', () => {
-        cy.server()
-        cy.route({
+        cy.intercept({
             method: 'POST',
             url: '**/auth/**',
             status: 401

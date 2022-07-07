@@ -5,9 +5,10 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "@faker-js/faker": "^6.3.0",
     "cypress": "^10.3.0",
     "cypress-file-upload": "^5.0.8",
-    "faker": "^6.6.6"
+    "faker": "^5.5.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

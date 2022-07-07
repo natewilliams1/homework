@@ -1,8 +1,5 @@
 # homework
 
-## Ruby/Selenium Automation:
-- homework > spec folder > login_spec.rb
-
 ## Cypress/javascript Automation:
 - homework > Cypress folder > integration folder > login folder > shipt_account_login_spec.js
 
