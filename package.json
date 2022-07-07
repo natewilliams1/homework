@@ -1,24 +1,25 @@
 {
-	"name": "cypress_messing-around",
-	"version": "1.0.0",
-	"description": "Cypress Framework",
-	"main": "index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"cypress:open": "$(npm bin)/cypress open",
-		"cypress:run": "$(npm bin)/cypress run"
-	},
-	"author": "Nate Williams",
-	"license": "ISC",
-	"devDependencies": {
-		"cypress": "^3.8.3",
-		"eslint": "^5.16.0",
-		"eslint-plugin-chai-friendly": "^0.4.1",
-		"eslint-plugin-cypress": "^2.12.1"
-	},
-	"dependencies": {
-		"cypress-file-upload": "^5.0.8",
-		"faker": "^4.1.0",
-		"uuid": "^8.3.2"
-	}
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "## Ruby/Selenium Automation: - homework > spec folder > login_spec.rb",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^10.3.0",
+    "cypress-file-upload": "^5.0.8",
+    "faker": "^6.6.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natewilliams1/homework.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natewilliams1/homework/issues"
+  },
+  "homepage": "https://github.com/natewilliams1/homework#readme"
 }
