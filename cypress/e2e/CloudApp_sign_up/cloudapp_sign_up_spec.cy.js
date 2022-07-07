@@ -31,4 +31,14 @@ describe('Signup', () => {
         cy.log('checking for correct url')
         cy.url().should('not.contain', 'https://share.getcloudapp.com/dashboard')
     })
+
+    it('Prevents Signup with existing credentials', () => {
+        cy.get('@emailField').focus().type('nmwilliams87+cs@gmail.com')
+        cy.get('@passwordField').focus().type('Test1234')
+        cy.get('@signupButton').click()
+        cy.log('checking for correct url')
+        cy.url().should('not.contain', 'https://share.getcloudapp.com/dashboard')
+        cy.log('checking for validation error')
+        cy.get('body > .container > .alert-danger').should('be.visible').and('contain', 'Email has already been taken')
+    })
 })
