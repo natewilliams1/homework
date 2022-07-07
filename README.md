@@ -2,12 +2,15 @@
 
 ## Cypress/javascript Automation:
 - homework > Cypress folder > e2e folder > CloudApp_avatar > cloudapp_avatar_spec.cy.js
+
 -- logs into application, updates avatar, logs out of application
 
 - homework > Cypress folder > e2e folder > CloudApp_login > cloudapp_login_spec.cy.js
+
 -- logs into application, logs out of application, prevents login with invalid credentials
 
 - homework > Cypress folder > e2e folder > CloudApp_sign_up > cloudapp_sign_up_spec.cy.js
+
 -- signs up for application, logs out of application
 
 ### Quick Start
