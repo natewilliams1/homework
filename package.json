@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "@faker-js/faker": "^6.3.0",
-    "cypress": "^10.3.0",
+    "cypress": "^14.5.2",
     "cypress-file-upload": "^5.0.8",
     "faker": "^5.5.3"
   },
